@@ -1,0 +1,17 @@
+﻿<Window x:Class="RGStarter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RG-Starter" Height="331.042" Width="459.182" Icon="images/RGLogo.png" Background="#FF002F45" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" HorizontalAlignment="Center" VerticalAlignment="Center" Loaded="Window_Loaded">
+    <Grid Background="#FF002F45" Margin="0,0,4,0" Height="300" VerticalAlignment="Top">
+        <Image HorizontalAlignment="Left" Height="215" Margin="232,71,0,0" VerticalAlignment="Top" Width="213" Source="images/RGLogoBackground.jpg"/>
+        <Button x:Name="btnSettings" Content="Einstellungen" HorizontalAlignment="Left" Margin="39,240,0,0" VerticalAlignment="Top" Width="137" Click="btnSettings_Click" Height="28"/>
+        <Border BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="59" Margin="293,4,0,0" VerticalAlignment="Top" Width="146"/>
+
+        <Label x:Name="lblServerStatus" Content="Serverstatus" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="79" Foreground="White" Margin="298,8,0,0"/>
+        <Label x:Name="lblStatus"       Content="Online" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="55" Foreground="GreenYellow" Margin="382,8,0,0" FontWeight="Bold"/>
+        <Label x:Name="lblOnlinePlayer" Content="Spieler" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="79" Foreground="White" Margin="298,30,0,0"/>
+        <Label x:Name="lblPlayer"       Content="Anzahl" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="55" Foreground="White" Margin="382,30,0,0" FontWeight="Bold"/>
+        <Button x:Name="btnPlay"        Content="Spiel starten" HorizontalAlignment="Left" Height="28" Margin="39,207,0,0" VerticalAlignment="Top" Width="137" Click="btnPlay_Click"/>
+        <ListBox x:Name="lsbServerUpdate" HorizontalAlignment="Left" Height="170" Margin="10,10,0,0" VerticalAlignment="Top" Width="217"/>
+    </Grid>
+</Window>

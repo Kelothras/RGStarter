@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RGStarter" GeneratedClassName="WoWStarter">
+  <Profiles />
+  <Settings>
+    <Setting Name="WoWPath" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ServerURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.rising-gods.de</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
