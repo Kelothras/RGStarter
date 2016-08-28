@@ -35,3 +35,23 @@ C:\Users\Kelothras\Documents\Visual Studio 2015\Projects\RGStarter\RGStarter\obj
 C:\Users\Kelothras\Documents\Visual Studio 2015\Projects\RGStarter\RGStarter\bin\Debug\HtmlAgilityPack.dll
 C:\Users\Kelothras\Documents\Visual Studio 2015\Projects\RGStarter\RGStarter\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\Kelothras\Documents\Visual Studio 2015\Projects\RGStarter\RGStarter\bin\Debug\HtmlAgilityPack.xml
+C:\GitHub\RGStarter\RGStarter\bin\Debug\RGStarter.exe.config
+C:\GitHub\RGStarter\RGStarter\obj\Debug\Interop.Shell32.dll
+C:\GitHub\RGStarter\RGStarter\obj\Debug\RGStarter.csproj.ResolveComReference.cache
+C:\GitHub\RGStarter\RGStarter\bin\Debug\RGStarter.exe
+C:\GitHub\RGStarter\RGStarter\bin\Debug\RGStarter.pdb
+C:\GitHub\RGStarter\RGStarter\bin\Debug\HtmlAgilityPack.dll
+C:\GitHub\RGStarter\RGStarter\bin\Debug\HtmlAgilityPack.pdb
+C:\GitHub\RGStarter\RGStarter\bin\Debug\HtmlAgilityPack.xml
+C:\GitHub\RGStarter\RGStarter\obj\Debug\RGStarter.csprojResolveAssemblyReference.cache
+C:\GitHub\RGStarter\RGStarter\obj\Debug\MainWindow.baml
+C:\GitHub\RGStarter\RGStarter\obj\Debug\SettingsWindow.baml
+C:\GitHub\RGStarter\RGStarter\obj\Debug\MainWindow.g.cs
+C:\GitHub\RGStarter\RGStarter\obj\Debug\SettingsWindow.g.cs
+C:\GitHub\RGStarter\RGStarter\obj\Debug\App.g.cs
+C:\GitHub\RGStarter\RGStarter\obj\Debug\RGStarter_MarkupCompile.cache
+C:\GitHub\RGStarter\RGStarter\obj\Debug\RGStarter.g.resources
+C:\GitHub\RGStarter\RGStarter\obj\Debug\RGStarter.Properties.Resources.resources
+C:\GitHub\RGStarter\RGStarter\obj\Debug\RGStarter.csproj.GenerateResource.Cache
+C:\GitHub\RGStarter\RGStarter\obj\Debug\RGStarter.exe
+C:\GitHub\RGStarter\RGStarter\obj\Debug\RGStarter.pdb

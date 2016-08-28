@@ -17,9 +17,6 @@ using System.Windows.Threading;
 
 namespace RGStarter
 {
-    /// <summary>
-    /// Interaktionslogik für MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -35,9 +32,9 @@ namespace RGStarter
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            // Server Stats
-            updateServerStats();
-            // Timer
+            // Update Server Stats
+            //updateServerStats();
+            // Initialize Timer 
             DispatcherTimer disTimer = new DispatcherTimer();
             disTimer.Tick += new EventHandler(disTimer_Tick);
             disTimer.Interval = new TimeSpan(0, 5, 0);
@@ -56,19 +53,17 @@ namespace RGStarter
 
         private void disTimer_Tick(object sender, EventArgs e)
         {
-            updateServerStats();
-            // Forcing the CommandManager to raise the RequerySuggested event
-            //"CommandManager.InvalidateRequerySuggested();
+            //updateServerStats();
         }
 
         public void updateServerStats()
         {
-            // Initialisierung
+            // Init
             clStarter ProcessStarter = new clStarter();
             int OnlinePlayer = ProcessStarter.StatusCheck(RGStarter.WoWStarter.Default.ServerURL);
             string[,] strServerUpdate;
 
-            // Serverstatus setzen
+            // Serverstatus
             lblPlayer.Content = OnlinePlayer;
             if (OnlinePlayer > 0)
             {
@@ -83,6 +78,7 @@ namespace RGStarter
                 lblStatus.Foreground = Brushes.Red;
             }
 
+            // Read Server Updates from URL
             ProcessStarter.ServerUpdate("https://www.rising-gods.de/forum/95-serverupdates.html");
         }
 

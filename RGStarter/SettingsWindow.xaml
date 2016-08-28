@@ -3,10 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Settings" Height="210" Width="358" Initialized="windowSettings_Initialized" Icon="images/RGLogo.png" Background="#FF002F45" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <Grid Background="#FF002F45" Margin="0,0,4,0">
-        <Button Content="Datei suchen" HorizontalAlignment="Left" Height="22" Margin="254,22,0,0" VerticalAlignment="Top" Width="79" Name="btnPath" Click="btnPath_Click"/>
+        <Button Content="Datei suchen" HorizontalAlignment="Left" Height="22" Margin="254,22,0,0" VerticalAlignment="Top" Width="82" Name="btnPath" Click="btnPath_Click"/>
         <TextBox x:Name="txtPath" HorizontalAlignment="Left" Height="22" Margin="7,22,0,0" Text="" VerticalAlignment="Top" Width="242" IsReadOnly="True" MaxLength="50" MaxLines="1"/>
         <Label Content="Speicherort der WoW.exe" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="155" Foreground="White" Margin="2,0,0,0"/>
-        <Button x:Name="btnSave" Content="Speichern" HorizontalAlignment="Left" Height="22" Margin="254,139,0,0" VerticalAlignment="Top" Width="79" Click="btnSave_Click"/>
+        <Button x:Name="btnSave" Content="Speichern" HorizontalAlignment="Left" Height="22" Margin="254,139,0,0" VerticalAlignment="Top" Width="82" Click="btnSave_Click"/>
+        <Button x:Name="btnDelCache" Content="Cache löschen" HorizontalAlignment="Left" Height="22" Margin="10,139,0,0" VerticalAlignment="Top" Width="82" Click="btnDelCache_Click"/>
 
     </Grid>
 </Window>

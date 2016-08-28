@@ -18,9 +18,6 @@ using Shell32;
 
 namespace RGStarter
 {
-    /// <summary>
-    /// Interaktionslogik für Settings.xaml
-    /// </summary>
     public partial class SettingsWindow : Window
     {
         public string strWoWPath = "";
@@ -54,7 +51,6 @@ namespace RGStarter
                 strWoWPath = ofdPath.FileName.ToString();
                 // Maximal soviel vom Pfad ausgeben wie im Textfeld angegeben
                 txtPath.Text = strWoWPath;
-                
                 
                 WoWStarter.Default.WoWPath = strWoWPath.ToString();
             }
@@ -95,6 +91,28 @@ namespace RGStarter
         {
             Close();
             WoWStarter.Default.Save();
+        }
+
+        private void btnDelCache_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (strWoWPath == "")
+            {
+                strWoWPath = getAppSetting("WoWPath");
+            }
+            FileInfo fileInfoWoW = new FileInfo(strWoWPath);
+
+            string strWoWFolder = fileInfoWoW.Directory.ToString();
+            string strCacheDir = strWoWFolder + "\\test";
+
+            DirectoryInfo dirWoWFolder = new DirectoryInfo(strWoWFolder);
+            DirectoryInfo dirWoWCacheFolder = new DirectoryInfo(strCacheDir);
+
+            if (dirWoWCacheFolder.Exists == true) 
+            { 
+                dirWoWCacheFolder.Delete(); 
+            }
+                
         }
     }
 }
