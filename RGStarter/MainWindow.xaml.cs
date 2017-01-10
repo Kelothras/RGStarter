@@ -19,6 +19,7 @@ namespace RGStarter
 {
     public partial class MainWindow : Window
     {
+        public string[,] strUpdate;
         public MainWindow()
         {
             InitializeComponent();
@@ -32,8 +33,8 @@ namespace RGStarter
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            // Update Server Stats
-            //updateServerStats();
+            updateServerStats();
+            getServerUpdate();
             // Initialize Timer 
             DispatcherTimer disTimer = new DispatcherTimer();
             disTimer.Tick += new EventHandler(disTimer_Tick);
@@ -41,45 +42,82 @@ namespace RGStarter
             disTimer.Start();
         }
 
-        private void btnPlay_Click(object sender, RoutedEventArgs e)
+        private void getServerUpdate()
         {
-            clStarter ProcessStarter = new clStarter();
-            if (WoWStarter.Default.WoWPath.Length > 0)
+            string[,] strServerUpdate = new string[,]
+            { 
+                { "Test", "intranet" },
+                { "Test2", "intranet2"}
+            };
+            strUpdate = strServerUpdate;
+            //clStarter ProcessStarter = new clStarter();
+            //string[] strServerUpdate = ProcessStarter.getServerUpdate(WoWStarter.Default.UpdateUrl);
+            foreach (var item in strServerUpdate)
             {
-                ProcessStarter.StartGame(WoWStarter.Default.WoWPath);
+                lsbServerUpdate.Items.Add(item);  
             }
+
         }
 
+        private void btnPlay_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                clStarter ProcessStarter = new clStarter();
+                if (WoWStarter.Default.WoWPath.Length > 0)
+                {
+                    ProcessStarter.StartGame(WoWStarter.Default.WoWPath);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Fehler beim Starten aufgetreten");
+            }
+
+        }
 
         private void disTimer_Tick(object sender, EventArgs e)
         {
-            //updateServerStats();
+            updateServerStats();
         }
 
         public void updateServerStats()
         {
-            // Init
-            clStarter ProcessStarter = new clStarter();
-            int OnlinePlayer = ProcessStarter.StatusCheck(RGStarter.WoWStarter.Default.ServerURL);
-            string[,] strServerUpdate;
-
-            // Serverstatus
-            lblPlayer.Content = OnlinePlayer;
-            if (OnlinePlayer > 0)
+            try
             {
-                // Server Online
-                lblStatus.Content = "Online";
-                lblStatus.Foreground = Brushes.GreenYellow;
-            }
-            else
-            {
-                // Server Offline
-                lblStatus.Content = "Offline";
-                lblStatus.Foreground = Brushes.Red;
-            }
+                // Init
+                clStarter ProcessStarter = new clStarter();
+                int OnlinePlayer = ProcessStarter.StatusCheck(WoWStarter.Default.ServerUrl);
 
-            // Read Server Updates from URL
-            ProcessStarter.ServerUpdate("https://www.rising-gods.de/forum/95-serverupdates.html");
+                // Serverstatus
+                lblPlayer.Content = OnlinePlayer;
+                if (OnlinePlayer > 0)
+                {
+                    // Server Online
+                    lblStatus.Content = "Online";
+                    lblStatus.Foreground = Brushes.GreenYellow;
+                }
+                else
+                {
+                    // Server Offline
+                    lblStatus.Content = "Offline";
+                    lblStatus.Foreground = Brushes.Red;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblStatus.Content = "Error";
+                lblStatus.Foreground = Brushes.Yellow;
+                MessageBox.Show(ex.Message, "Keine Verbindung möglich");
+            }
+            
+        }
+
+        private void lsbServerUpdate_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+
+            MessageBox.Show(lsbServerUpdate.SelectedItem.ToString());
         }
 
     }

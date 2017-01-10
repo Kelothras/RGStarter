@@ -35,27 +35,26 @@ namespace RGStarter
 
                 return OnlinePlayer;
             }
-            catch (Exception) // Error Handling
+            catch (Exception ex) // Error Handling
             {
-                throw;
+                throw ex;
             }
         }
 
         public void StartGame(string strPath)
         {
-            // Start Game
             try
             {
                 System.Diagnostics.Process.Start(strPath);
             }
-            catch (Exception) // Error Handling
+            catch (Exception ex) // Error Handling
             {
-                throw;
+                throw ex;
             }
             
         }
 
-        public void ServerUpdate(string strURL)
+        public string[] getServerUpdate(string strURL)
         {
             string[,] strServerUpdate = new string[5 , 2];
             try
@@ -81,10 +80,13 @@ namespace RGStarter
                     strServerUpdate[i, 1] = updatenode[i].OuterHtml;
                 }
 
+                string[] strings = new string[]{"hey", "world!"};
+                return strings;
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
     }

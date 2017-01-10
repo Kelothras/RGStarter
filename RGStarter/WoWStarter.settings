@@ -5,8 +5,11 @@
     <Setting Name="WoWPath" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ServerURL" Type="System.String" Scope="User">
+    <Setting Name="ServerUrl" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://www.rising-gods.de</Value>
+    </Setting>
+    <Setting Name="UpdateUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.rising-gods.de/forum/95-serverupdates.html</Value>
     </Setting>
   </Settings>
 </SettingsFile>

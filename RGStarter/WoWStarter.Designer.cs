@@ -12,7 +12,7 @@ namespace RGStarter {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
     public sealed partial class WoWStarter : global::System.Configuration.ApplicationSettingsBase {
         
         private static WoWStarter defaultInstance = ((WoWStarter)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new WoWStarter())));
@@ -37,12 +37,24 @@ namespace RGStarter {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("https://www.rising-gods.de")]
-        public string ServerURL {
+        public string ServerUrl {
             get {
-                return ((string)(this["ServerURL"]));
+                return ((string)(this["ServerUrl"]));
             }
             set {
-                this["ServerURL"] = value;
+                this["ServerUrl"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://www.rising-gods.de/forum/95-serverupdates.html")]
+        public string UpdateUrl {
+            get {
+                return ((string)(this["UpdateUrl"]));
+            }
+            set {
+                this["UpdateUrl"] = value;
             }
         }
     }
